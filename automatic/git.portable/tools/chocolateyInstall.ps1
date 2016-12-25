@@ -22,4 +22,4 @@ if (Test-Path $deprecatedInstallDir) {
     rm $deprecatedInstallDir -recurse -force -ea 0
 }
 
-Remove-Item -force $filePath32, $filePath64 -ea 0
+rm -force $filePath32, $filePath64 -ea 0
