@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
@@ -22,12 +22,4 @@ $packageArgs = @{
     ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
-
-$packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
-Write-Host "$packageName installed to '$installLocation'"
-
-Install-ChocolateyPath "$installLocation\cmd"
-
 rm -Force $filePath32, $filePath64 -ea 0
