@@ -32,7 +32,6 @@ function Get-InstallComponents( [HashTable]$pp )
     } else { $res += "ext", "ext\shellhere", "ext\guihere" }
 
     # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc)
-    # Add other items to this if block or use $IsRunningUnderSystemAccount to adjust existing logic that needs changing
     $isSystem = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem
     if ( !$isSystem ) { $res += "icons\quicklaunch" }
 
