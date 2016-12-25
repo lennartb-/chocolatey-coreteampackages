@@ -26,7 +26,10 @@ function Set-InstallerRegistrySettings( [HashTable]$pp )
 function Get-InstallComponents( [HashTable]$pp )
 {
     $res = "icons", "assoc", "assoc_sh"
-    if (!$pp.NoShellIntegration) { $res += "ext", "ext\shellhere", "ext\guihere" }
+
+    if ($pp.NoShellIntegration) {
+        Write-Host "Parameter: no git shell integration"
+    } else { $res += "ext", "ext\shellhere", "ext\guihere" }
 
     # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc)
     # Add other items to this if block or use $IsRunningUnderSystemAccount to adjust existing logic that needs changing

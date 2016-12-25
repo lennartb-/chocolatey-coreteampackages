@@ -18,7 +18,7 @@ $packageArgs = @{
     FileType       = 'exe'
     SoftwareName   = 'Git version *'
     File           = $installFile
-    SilentArgs     = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG", (Get-InstallComponents)
+    SilentArgs     = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG", (Get-InstallComponents $pp)
     ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
