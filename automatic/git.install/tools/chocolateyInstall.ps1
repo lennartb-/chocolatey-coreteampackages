@@ -10,7 +10,6 @@ $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true
 
 $pp = Get-PackageParameters
 Set-InstallerRegistrySettings $pp
-Get-InstallComponents $pp
 
 Stop-GitSSHAgent
 
