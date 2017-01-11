@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = 'calibre'
   fileType       = 'MSI'
-  url            = 'https://download.calibre-ebook.com/2.73.0/calibre-2.73.0.msi'
-  url64Bit       = 'https://download.calibre-ebook.com/2.73.0/calibre-64bit-2.73.0.msi'
-  checksum       = 'f68e32f963c75f4f2dfa8a1895d5ff9d891c5ff2e3e6cd75a158f8636f8c2e5f'
-  checksum64     = 'f575c5329f3be94a22612b3719e668bdec014c4dfd4b78fad61896aa94464565'
+  url            = 'https://download.calibre-ebook.com/2.76.0/calibre-2.76.0.msi'
+  url64Bit       = 'https://download.calibre-ebook.com/2.76.0/calibre-64bit-2.76.0.msi'
+  checksum       = '400264bc86d295563619bac520037a856c49c91875545e925862d8bf1ac89f95'
+  checksum64     = '9234768b373c0da26b0d24160dd953fdae8a711c79aae50dd96c33bb9567fd21'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/quiet'

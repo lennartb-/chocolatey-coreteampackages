@@ -26,7 +26,7 @@ For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
 ## Notes
 
 - The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
-</description>
+    </description>
     <projectUrl>https://git-for-windows.github.io/</projectUrl>
     <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
     <docsUrl>http://git-scm.com/doc</docsUrl>
@@ -42,6 +42,6 @@ For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
     </dependencies>
   </metadata>
   <files>
-  </files>    
+  </files>
 </package>
 <!-- character encoding: “UTF-8” -->
