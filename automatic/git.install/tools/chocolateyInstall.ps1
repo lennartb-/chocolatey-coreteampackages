@@ -31,4 +31,4 @@ Write-Host "$packageName installed to '$installLocation'"
 Install-ChocolateyPath "$installLocation\cmd"
 
 
-rm -Force $filePath32, $filePath64 -ea 0
+Remove-Item -Force $filePath32, $filePath64 -ea 0

@@ -41,8 +41,8 @@ function Get-InstallComponents( [HashTable]$pp )
 
 function Stop-GitSSHAgent()
 {
-    if (!(ps ssh-agent -ea 0)) { return }
+    if (!(Get-Process ssh-agent -ea 0)) { return }
 
     Write-Host "Killing any running git ssh-agent instances"
-    ps ssh-agent | ? {$_.Path -ilike "*\git\usr\bin\*"} | kill
+    Get-Process ssh-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"} | Stop-Process
 }
